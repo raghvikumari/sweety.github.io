@@ -9,7 +9,7 @@ background: rgb(44, 63, 77);
 html {
 overflow-x: hidden;
 scroll-behavior: smooth;
-overflow-y: hidden;
+/* overflow-y: hidden; */
 }
 header {
 display: flex;
@@ -46,13 +46,15 @@ animation: slidetop 1s ease forwards;
 animation-delay: calc(.2s * var(--i));
 }
 .nav a:hover {
-background-color: white;
-border: 1.5px red;
-/* transition: scale(1.5); */
+  /* background-color: aqua; */
+  border: 1.5px red;
+  background-color: cadetblue;
+  font-size: 20px;
+  /* transition: scale(1.5); */
 }
-.po{
+/* .po{
 animation: slideRight 2s ease forwards;
-}
+} */
 .logo {
 font-size: xx-large;
 color: aqua;
@@ -65,62 +67,115 @@ font-size: 50px;
 }
 .box{
   /* border: 2px solid: rgb; */
-  background: rgb(44, 63, 77);
+  background: black;
   position: fixed;
   height: 100px;
   width: 100%;
   z-index: 1000;
   }
-  .contact-container {
-    /* background: aqua; */
+ 
+  .contact-container{
     position: relative;
-    width: 100%;
-    height: 100vh;
-    margin-top: 30px;
-    display: flex;
-
-     flex-direction: column;  
-    justify-content: space-between;
-    align-items: center;
-    font-style: italic;
-    /* justify-items: center; */
-    /* padding-left: 40px; */
-    
-  }
-  .mb-3-1
-  {
-    max-width: 400px;
-    /* max-height: 400px; */
-    font-size: larger;
-    font-weight: bolder;
-    color: azure;
-    padding: 30px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
-  .mb-3{
-    font-size: larger;
-    font-weight: bolder;
-    color: azure;
-    padding: 30px;
+  h1{
+    color: aliceblue;
+    margin-top: 100px;
+    font-size: 66px;
   }
-  h3{
-    font-weight: lighter;
-     font-size: 15px; 
-     color: aqua;
+
+  .contact{
+    margin-top: 50px;
+    margin-left: -900px;
+    height: 500px;
+    width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(54, 76, 93);
+    box-shadow: 2px 2px 20px black;
+    animation: slideRight 1s ease forwards;
+    /* text-align: center; */
   }
-  button{
+  .xyz{
+    display: flex;
+    
+    justify-content: space-evenly;
+    
+    padding-left: 200px;
+  }
+  .contact form{
+    margin-left: 0;
+  }
+  .msg{
+    height: 40px;
+    margin: 20px;
+    width: 454px;
+    padding: 5px;
+    font-size: large;
+    border-radius: 10px;
+    border: 2px solid black;
+  }
+  
+  .btn1{
     border-radius: 10px;
     height: 25px;
     width: 100px;
     font-size: larger;
     font-weight: bold;
     font-style: italic;
-    margin-left: 100px;
-    margin-top: 70px;
+    margin-left: 183px;
+    margin-top: 10px;
   }
-  button:hover{
-    cursor: pointer;
-    color: brown;
-    background-color: cornflowerblue;
+  
+  .xyz .gif{
+    position: relative;
+    
+    margin-top: 50px;
+    margin-right: -800px;
+    height: 500px;
+    width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+    animation: slideleft 1s ease forwards;
+  
+  /* padding-right: 500px; */
+}
+.gif img{
+  /* padding-right: 500px; */
+  height: 500px;
+  width: 400px;
+  border-radius: 50px;
+  box-shadow: 2px 2px 10px black;
+}
+
+
+@keyframes slideRight {
+  0%{
+      transform: translateX(-100px);
+      opacity: 0;
+      /* color: aqua;
+      font-size: small; */
   }
+  100%
+  {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+span{
+  color: aqua;
+}
+@keyframes slideleft
+{
+  0%{
+    transform: translateX(100px);
+opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

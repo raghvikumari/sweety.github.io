@@ -1,59 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="html" href="1.html">
-    <link rel="stylesheet" href="2.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="html" href="1.html" />
+    <link rel="stylesheet" href="2.css" />
     <title>Contact</title>
-</head>
-<body>
-  <div class="co">
-  <section class="box">
-      <header class="header">
+  </head>
+  <body>
+    <div class="co">
+      <section class="box">
+        <header class="header">
           <div class="po">
             <a href="#" class="logo">PORTFOLIO.</a>
           </div>
           <div class="nav">
             <nav class="navbar">
               <ul>
-              <li>  <a href="index.html">HOME</a></li>
-              <li>  <a href="about.html">ABOUT</a></li>
-              <li> <a href="#">CONTACT</a></li>
-              <li><a href="skills.html" >SKILLS</a></li>
-              <li><a href="services.html">Services</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-  </section>
-  <div class="contact-container">
-    <h1>contact <span>me</span></h1>
-        <div class="contact">
-            <form>
-              <div class="mb-3-1">
-                
-                <input type="text" placeholder="Full Name" class="form-control" id="clientname">
-        
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="project.html">SKILLS</a></li>
+                <li><a href="services.html">Services</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+      </section>
+      <div class="contact-container">
+        <h1 id="heading">Contact <span>me</span></h1>
+        <div class="xyz">
+          <div class="contact">
+            <form action="#">
+              <h3>Your Name</h3>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Enter your full name"
+                  class="msg"
+                />
               </div>
-                <div class="mb-3-1">
-                  <!-- <label for="clientemail" class="form-label"> </label> -->
-                  <input type="email" placeholder="emailaddress" class="form-control" id="clientemail" aria-describedby="emailHelp">
-                  <div id="emailHelp" class="form-text"><h3>We'll never share your email with anyone else.</h3></div>
-                </div>
-                <div class="mb-3">
-                  <!-- <label for="clientphone" class="form-label">Phone</label> -->
-                  <input type="phone" placeholder="class="form-control" id="clientphone">
-                </div>
-                <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="isclient">
-                  <label class="form-check-label" for="isclient">I want you to work on a project with me</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
+              <h3>Your Email</h3>
+              <div>
+                <input
+                  type="email"
+                  placeholder="Enter your full email"
+                  class="msg"
+                />
+              </div>
+              <h3>Your number</h3>
+              <div>
+                <input
+                type="number"
+                placeholder="Enter your number"
+                class="msg"/>
+              </div>
+              <h3>Your message</h3>
+              <div>
+                <textarea class="msg" cols="30" rows="100"></textarea>
+              </div>
+              <div>
+                <button type="submit" class="btn1">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="gif">
+            <img src="https://cdn.dribbble.com/users/1787720/screenshots/6905961/contact-illustration.gif" alt="">
+          </div>
         </div>
-  </div>
-  </div>
-</body>
+      </div>
+    </div>
+  </body>
 </html>
