@@ -34,7 +34,7 @@
           <h2>About <span>Me</span></h2>
           </div>
           <div class="about">
-            <div class="skill">
+            <div class="skill" data-tilt>
               <img src="c++.jpg">
               <div class="skil1">
 
@@ -88,5 +88,26 @@
             </div>
           </div>
         </div> 
+        <footer>
+          <div class="center">
+            <i class='bx bxs-home-alt-2'></i>
+            <i class='bx bxs-user-detail'></i>
+            <i class='bx bx-user-circle' ></i>
+            
+          </div>
+         
+      </footer>
+      <script type="text/javascript" src="vanilla-tilt.js"></script>
+      <script>
+        VanillaTilt.init(document.querySelectorAll(".skil1"), {
+		max: 25,
+		speed: 400
+	});
+  VanillaTilt.init(document.querySelectorAll(".skill"), {
+		max: 25,
+		speed: 400
+	});
+      </script>
+
 </body>
 </html>

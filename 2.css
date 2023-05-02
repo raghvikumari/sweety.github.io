@@ -116,18 +116,27 @@ font-size: 50px;
     padding: 5px;
     font-size: large;
     border-radius: 10px;
-    border: 2px solid black;
-  }
-  
-  .btn1{
-    border-radius: 10px;
-    height: 25px;
-    width: 100px;
-    font-size: larger;
-    font-weight: bold;
-    font-style: italic;
-    margin-left: 183px;
-    margin-top: 10px;
+    /* border: 2px solid white blck; */
+    background-color: rgb(44, 63, 77);}
+    .msg:hover{
+      background-color: aliceblue;
+    }
+    
+    .btn1{
+      border-radius: 10px;
+      background-color: rgb(44, 63, 77);
+      height: 25px;
+      width: 100px;
+      font-size: larger;
+      font-weight: bold;
+      font-style: italic;
+      margin-left: 183px;
+      margin-top: 10px;
+    }
+    .btn1:hover{
+      cursor: pointer;
+      background-color: aliceblue;
+    
   }
   
   .xyz .gif{
