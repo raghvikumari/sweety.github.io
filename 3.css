@@ -1,49 +1,47 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
-body{
-background-color: black; 
-
+body {
+  background: radial-gradient(aqua,black);
 }
 html {
-/* overflow-x: hidden; */
-scroll-behavior: smooth;
-overflow-y: hidden;
+  /* overflow-x: hidden; */
+  scroll-behavior: smooth;
+  /* overflow-y: hidden; */
 }
 header {
-display: flex;
-margin-top: 30px;
-margin-left: 50px;
-position: fixed;
-height: 50px;
-width: 100%;
-z-index: 1000;
-
+  display: flex;
+  margin-top: 30px;
+  margin-left: 50px;
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  z-index: 1000;
 }
 a {
-text-decoration: none;
+  text-decoration: none;
 }
-ul{
-display: flex;
+ul {
+  display: flex;
 }
-li{
-list-style: none;
+li {
+  list-style: none;
 }
 .nav {
-margin-left: 550px;
-/* margin-top: 20px; */
+  margin-left: 550px;
+  /* margin-top: 20px; */
 }
 .nav a {
-display: inline-block;
-padding: 10px;
-margin: 10px;
-justify-content: space-between;
-border: 2px solid white;
-border-radius: 10px;
-color: aqua;
-animation: slidetop 1s ease forwards;
-animation-delay: calc(.2s * var(--i));
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  justify-content: space-between;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: aqua;
+  animation: slidetop 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
 }
 .nav a:hover {
   /* background-color: aqua; */
@@ -56,102 +54,170 @@ animation-delay: calc(.2s * var(--i));
 animation: slideRight 2s ease forwards;
 } */
 .logo {
-font-size: xx-large;
-color: aqua;
+  font-size: xx-large;
+  color: aqua;
 }
-h3{
- font-weight: bold;
- font-size: 50px; 
+h3 {
+  font-weight: bold;
+  font-size: 50px;
 }
-.logo:hover{
-color: white;
-font-size: 50px;
-/* animation-duration: 3s; */
-
+.logo:hover {
+  color: white;
+  font-size: 50px;
+  /* animation-duration: 3s; */
 }
-.box{
+.box1 {
   border: 2px solid black;
   background: black;
   position: fixed;
   height: 100px;
   width: 100%;
   z-index: 1000;
+}
+.about-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  margin-top: 150px;
+}
+.about {
+  margin-top: 50px;
+  perspective: 1000px;
+  height: 450px;
+  width: 450px;
+  perspective-origin: 50% 50%;
+  border-top: solid 3px aqua;
+  border-bottom: solid 3px aqua;
+  background-image: linear-gradient(
+    135deg,
+    white 25%,
+    aqua 25%,
+       rgb(36, 75, 75) 50%,
+    aqua 50%,
+  aqua 75%,
+    rgb(36, 75, 75)75%,
+    rgb(36, 75, 75) 100%
+  );
+  background-size: 80px 80px;
+  animation: begin 3s linear 2s infinite;
+}
+@keyframes begin {
+  from {
+    background-position: 0px;
   }
-
-  .about-container{
-    /* position: relative; */
-     display: flex; 
-     width: 100%;
-     flex-direction: column; 
-     justify-content: center;
-     align-items: center;
- 
-     /* margin-top: 100px; */
- }
- h2{
-   color: aliceblue;
-   margin-top: 150px;
-   font-size: 40px;
-   margin-left: -190px;
- position: fixed;
- }
-span{
-   color: aqua;
+  to {
+    background-position: 80px;
+  }
 }
-.about{
+.skill {
+  margin: auto;
+  top: 100px;
+  position: relative;
+  height: 300px;
+  width: 300px;
+  transform-style: preserve-3d;
+}
+.skill div {
+  position: absolute;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 100%;
   width: 100%;
- padding-top: 250px;
- padding-left: 50px;
- display: grid;
- grid-template-columns: repeat(7, 1fr);
- align-items: center;
- gap: 2.5rem;
+  opacity: 0.9;
+  background-color: black;
+  border: solid 1px white;
+  color: aliceblue;
+  font: 12px;
+  text-align: center;
+  transition: transform 0.2s ease-in;
 }
-.about .skill{
- position: relative;
- background-color: aliceblue;
- border-radius: 10px;
- height: 300px;
- width: 300px;
- display: flex;
- flex-direction: column;
- margin: 50px;
- /* overflow: hidden; */
- box-shadow: 0 0 1rem ;
- /* border-radius: 10px; */
+.skill div:hover {
+  /* background-color: red; */
+}
+.front {
+  transform: translateZ(-100px) rotateX(-270deg);
+  transform-origin: top;
+}
+.back {
+  transform: translateZ(200px) rotateZ(180deg);
+}
+.right {    transform: rotateY(-270deg) translateX(100px);
+  transform-origin: top right;
+}
+.left {
+  transform: rotateY(270deg) translateX(-100px);
+  transform-origin: center left;
+}
+.top {
+  /* transform: rotateX(-270deg) translateY(-100px); */
+  transform: translateZ(-100px);
+  transform-origin: top center;
+}
+.bottom {
+  transform: rotateX(270deg) translateY(100px);
+  transform-origin: bottom center;
+}
+.skill {
+  animation: rotate 20s infinite linear;
+}
+@keyframes rotate {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+.about:hover .front {
+  transform: translateZ(300px);
+}
+.about:hover .back {
+  transform: translateZ(-200px) rotateY(180deg);
+}
+.about:hover .right {
+  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+}
+.about:hover .left {
+  transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+}
+.about:hover .top {
+  transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+}
+.about:hover .bottom {
+  transform: rotateX(270deg) translateZ(100px) translateY(100px);
+ }
  
-}
-
 .skill img{
- height: 100%;
-
- width: 100%;
- box-shadow: 0 0 1rem ;
- transition: .5s ease;
-}
-.skill:hover img
-{
- transform: scale(1.1);
-}
-.skill .skil1{
- position: absolute;
- bottom: 0;
- left: 0;
+  height: 100%;
+ 
   width: 100%;
- height: 100%; 
- background: linear-gradient(rgba(0, 0, 0, .1),aqua);
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- text-align: center;
- transform: translateY(0%);
- opacity: 0;
- /* padding: 0 4rem; */
-}
-.skill .skil1:hover{
-
- transform: translateY(0);
- opacity: 1;
+  box-shadow: 0 0 1rem ;
+  transition: .5s ease;
  }
 
+  .skil1{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+   width: 100%;
+  height: 100%; 
+  background: linear-gradient(rgba(0, 0, 0, .1),aqua);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(0%);
+  opacity: 0;
+  /* padding: 0 4rem; */
+ }
+  .skil1:hover{
+
+  transform: translateY(0);
+  opacity: 1;
+  }
+ 
