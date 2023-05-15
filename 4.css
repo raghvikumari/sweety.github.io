@@ -4,11 +4,7 @@
 }
 body{
      background-color: black;  
-      /* height: 100%; */
-     
-     /* background-image: linear-gradient(rgba(0, 0, 0, .1),aqua); */
-     /* clip-path: circle(30% at right 70%); */
-/* position: relative; */
+
     }
     body::before{
       content: '';
