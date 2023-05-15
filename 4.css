@@ -1,11 +1,11 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
 }
-body{
-     background-color: black;  
-
-    }
+body {
+  background-color: black;
+}
     body::before{
       content: '';
       position: absolute;
@@ -39,7 +39,7 @@ body{
       z-index: -1;
       animation: animate 11s linear infinite;
     }
-    html {
+    /* html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   overflow-y: hidden;
@@ -66,7 +66,7 @@ li{
 .nav {
   margin-left: 550px;
   /* margin-top: 20px; */
-}
+/* }
 .nav a {
   display: inline-block;
   padding: 10px;
@@ -79,16 +79,12 @@ li{
   animation-delay: calc(.2s * var(--i));
 }
 .nav a:hover {
-  /* background-color: aqua; */
+
   border: 1.5px red;
   background-color: cadetblue;
   font-size: 20px;
-  /* transition: scale(1.5); */
 }
-/* body,.nav a:hover{
-  color: aliceblue;
-  //border: 2px solid aliceblue;
-} */
+
 .po{
   animation: slideRight 2s ease forwards;
  }
@@ -99,7 +95,7 @@ li{
 .logo:hover{
   color: white;
   font-size: 50px;
-  /* animation-duration: 3s; */
+
 
 }
   .box{
@@ -108,7 +104,76 @@ li{
     position: fixed;
     height: 100px;
     width: 100%;
-    z-index: 1000;
+    z-index: 1000; */
+    /* } */
+
+    html {
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      overflow-y: hidden;
+      /* background: radial-gradient(aqua,black); */
+      
+    }
+    header {
+      display: flex;
+      margin-top: 0.5rem;
+      margin-left: 5rem;
+      position: fixed;
+      /* height: 100rem; */
+      width: 100%;
+      z-index: 1000;
+    }
+    a {
+      text-decoration: none;
+    }
+    .logo {
+      font-size: xx-large;
+      color: aqua;
+    }
+    .box {
+      border: 2px solid rgb(0, 0, 0,0.1);
+      background: rgb(0, 0, 0,0.1);
+      position: fixed;
+      height: 6.5rem;
+      width: 100%;
+      /* background: linear-gradient(transparent, aqua); */
+      z-index: 1000;
+    }
+    
+    
+    .po a {
+      text-decoration: none;
+      color: aqua;
+    }
+    ul {
+      display: flex;
+    }
+    li {
+      list-style: none;
+    }
+    .nav {
+      margin:1.5rem 40rem;
+      
+    }
+    .nav a {
+      text-decoration: none;
+      color: aqua;
+      display: inline-block;
+      padding: 0.5rem;
+      margin: 0.5rem;
+      background: linear-gradient(transparent, black);
+      justify-content: space-between;
+      border: 0.16rem solid white;
+      border-radius: 0.6rem;
+      animation: slidetop 1s ease forwards;
+      animation-delay: calc(0.2s * var(--i));
+    }
+    .nav a:hover {
+      /* background-color: aqua; */
+      border: 1.5rem rgb(47, 39, 39);
+      background-color: cadetblue;
+      font-size: 1.5rem;
+      /* transition: scale(1.5); */
     }
     .services-container{
         position: relative;
@@ -121,7 +186,7 @@ li{
     }
     h1{
         color: aliceblue;
-        margin-top: 150px;}
+        margin-top: 150px;} */
     span{
         color: aqua;
     }
