@@ -11,122 +11,73 @@ html {
   scroll-behavior: smooth;
   
 }
-/* header {
-  display: flex;
-  margin-top: 30px;
-  margin-left: 50px;
-  position: fixed;
-  height: 50px;
-  width: 100%;
-  z-index: 1000;
-}
 a {
   text-decoration: none;
 }
-ul {
+.header{
+  position: fixed;
+  width: 100%;
+  height: 14vh;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color:black;
+  z-index: 1000;
+  /* margin-right: 100px; */
 }
-li {
+li{
   list-style: none;
 }
-.nav {
-  margin-left: 550px;
 
-}
-.nav a {
-  display: inline-block;
-  padding: 10px;
-  margin: 10px;
-  justify-content: space-between;
-  border: 2px solid white;
-  border-radius: 10px;
-  color: aqua;
-  animation: slidetop 1s ease forwards;
-  animation-delay: calc(0.2s * var(--i));
-}
-.nav a:hover {
-  border: 1.5px red;
-  background-color: cadetblue;
-  font-size: 20px;
-}
-.logo {
-  font-size: xx-large;
-  color: aqua;
-}
-.logo:hover {
-  color: white;
-  font-size: 50px;
-}
-.box {
-  border: 2px solid black;
-  background: black;
-  position: fixed;
-  height: 100px;
-  width: 100%;
-  z-index: 1000;
-} */
 
-header {
+.navbar ul{
   display: flex;
-  margin-top: 0.5rem;
-  margin-left: 5rem;
-  position: fixed;
-  /* height: 100rem; */
-  width: 100%;
-  z-index: 1000;
+  padding-top: 5vh;
+  padding-right: 100px;
+  margin-right: 150px;
+  /* background-color: red; */
+  /* height: 2; */
+  }
+  .navbar ul li a{
+    padding: 0.5rem 0.5rem;
+background-color: aliceblue;
+border: 0.16rem solid white;
+display: inline-block;
+margin: 0 0.5rem;
+border-radius: 0.6rem;
+background: linear-gradient(transparent, black);
+animation: slidetop 1s ease forwards;
+animation-delay: calc(0.2s * var(--i));
+color: aqua;
+font-size: 1rem;
 }
-a {
-  text-decoration: none;
+.navbar a:hover {
+    border: 1.5rem rgb(47, 39, 39);
+    background-color: cadetblue;
+    font-size: 1.5rem;
+  }
+.po{
+    border: 2px solid black;
+    padding: 0 3rem;
+    height: 2.5rem;
+    width: 12rem;
+    /* background-color: white; */
+    font-size: 2rem;
+    animation: slideRight 2s ease forwards;
+  }
+.logo{
+    color: aqua;
+    
 }
-.logo {
-  font-size: xx-large;
-  color: aqua;
-}
-.box {
-  border: 2px solid rgb(0, 0, 0);
-  background: rgb(0, 0, 0);
-  position: fixed;
-  height: 6.5rem;
-  width: 100%;
-  /* background: linear-gradient(transparent, aqua); */
-  z-index: 1000;
+.logo:hover{
+    /* transform: scale(1.2); */
+    font-size: 2.5rem;
+    color: aliceblue;
+    
+    /* transform: scale(1.2); */
 }
 
-
-.po a {
-  text-decoration: none;
-  color: aqua;
-}
-ul {
-  display: flex;
-}
-li {
-  list-style: none;
-}
-.nav {
-  margin:1.5rem 40rem;
-  
-}
-.nav a {
-  text-decoration: none;
-  color: aqua;
-  display: inline-block;
-  padding: 0.5rem;
-  margin: 0.5rem;
-  background: linear-gradient(transparent, black);
-  justify-content: space-between;
-  border: 0.16rem solid white;
-  border-radius: 0.6rem;
-  animation: slidetop 1s ease forwards;
-  animation-delay: calc(0.2s * var(--i));
-}
-.nav a:hover {
-  /* background-color: aqua; */
-  border: 1.5rem rgb(47, 39, 39);
-  background-color: cadetblue;
-  font-size: 1.5rem;
-  /* transition: scale(1.5); */
-}
 .project-container {
   position: relative;
   display: flex;
@@ -157,11 +108,11 @@ p {
 .propo .project {
   position: relative;
   border-radius: 10px;
-  height: 400px;
-  width: 400px;
+  height: 50vh;
+  width: 50vh;
   display: flex;
   flex-direction: column;
-  margin: 50px;
+  margin: 3.5rem;
   box-shadow: 0 0 1rem;
 }
 .project img {
@@ -209,4 +160,70 @@ h4 {
 .pro1 a i {
   font-size: 2rem;
   color: aliceblue;
+}
+@media (max-width: 1000px)
+{
+  .propo {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    align-items: center;
+    gap: 2.5rem;
+  }
+  .propo .project {
+   height: 300px;
+    width: 300px;
+    margin: 50px;
+    margin-top: 100px;
+   
+  }
+}
+@media (max-width: 550px){
+  html{
+      /* width: 100%; */
+      overflow-x: hidden;
+      height: 100%;
+      /* background-size:contain; */
+  }
+  .header{
+flex-wrap: wrap;
+  }
+  
+    
+  .navbar ul{
+    padding-top: 0vh;
+   padding-left: 5px;
+ 
+   }
+   .navbar ul li a{
+     padding: 0.03rem 0.03rem;
+ border: 0.16rem solid white;
+ margin: 0rem 0.24rem;
+ border-radius: 0.4rem;
+ font-size: 0.9rem;
+ }
+ .po{
+   padding: 0 1rem;
+   height: 1.5rem;
+   width: 12rem;
+   margin-left: -2px;
+ }
+h1 {
+margin-top: 180px;
+margin-bottom: 30px;
+/* margin-left: 150px; */
+}
+
+.propo {
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+  align-items: center;
+  gap: 2.5rem;
+}
+.propo .project {
+ height: 300px;
+  width: 300px;
+  margin: 20px;
+ 
+}
+
 }
